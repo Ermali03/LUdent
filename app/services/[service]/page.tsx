@@ -274,7 +274,7 @@ function getServiceData(serviceSlug: string) {
       ],
     },
     "esthetic-fill": {
-      title: "ESTHETIC FILLINGS",
+      title: "AESTHETIC FILLINGS",
       shortDescription:
         "Tooth-colored fillings that restore damaged teeth while maintaining a natural appearance.",
       image: "/images/eshtetic.jpg",

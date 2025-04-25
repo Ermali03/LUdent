@@ -360,9 +360,6 @@ export default function Home() {
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
                       <div className="text-white space-y-2">
-                        <p className="font-light">
-                          Implantology & Cosmetic Dentistry
-                        </p>
                         <p className="text-sm text-teal-100">
                           With over 15 years of experience, Dr. Ramadani has
                           placed more than 2,000 implants and performed
@@ -381,9 +378,6 @@ export default function Home() {
                 </div>
                 <div className="mt-8 space-y-2">
                   <h3 className="text-2xl font-bold">Dr. Arlind Ramadani</h3>
-                  <p className="text-teal-600">
-                    Implantology & Cosmetic Dentistry
-                  </p>
                 </div>
               </div>
 
@@ -392,9 +386,6 @@ export default function Home() {
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
                       <div className="text-white space-y-2">
-                        <p className="font-light">
-                          Orthodontics & Aesthetic Dentistry
-                        </p>
                         <p className="text-sm text-teal-100">
                           Dr. Kastrati is certified in Invisalign and other
                           modern orthodontic techniques, helping patients
@@ -413,9 +404,6 @@ export default function Home() {
                 </div>
                 <div className="mt-8 space-y-2">
                   <h3 className="text-2xl font-bold">Dr. Olta Kastrati</h3>
-                  <p className="text-teal-600">
-                    Orthodontics & Aesthetic Dentistry
-                  </p>
                 </div>
               </div>
             </div>
