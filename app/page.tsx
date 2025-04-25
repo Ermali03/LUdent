@@ -109,7 +109,7 @@ export default function Home() {
               <div className="relative">
                 <div className="absolute inset-0 border border-teal-200 -translate-x-4 -translate-y-4"></div>
                 <Image
-                  src="/images/image2.jpg"
+                  src="/images/luxury.jpeg"
                   alt="Dr. Olta's treatment room"
                   width={600}
                   height={700}
@@ -246,7 +246,7 @@ export default function Home() {
               <div className="relative overflow-hidden group">
                 <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 via-teal-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <Image
-                  src="/images/luxury.jpeg"
+                  src="/images/image2.jpg"
                   alt="Modern treatment room"
                   width={600}
                   height={400}

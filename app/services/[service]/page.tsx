@@ -1,20 +1,20 @@
-import Image from "next/image"
-import { ArrowRight } from "lucide-react"
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
-import { BookConsultation } from "@/components/book-consultation"
-import { HeroSectionWithOverlay } from "@/components/hero-section-with-overlay"
+import { BookConsultation } from "@/components/book-consultation";
+import { HeroSectionWithOverlay } from "@/components/hero-section-with-overlay";
 
 interface ServicePageProps {
   params: {
-    service: string
-  }
+    service: string;
+  };
 }
 
 export default function ServicePage({ params }: ServicePageProps) {
-  const serviceData = getServiceData(params.service)
+  const serviceData = getServiceData(params.service);
 
   if (!serviceData) {
-    return <div>Service not found</div>
+    return <div>Service not found</div>;
   }
 
   return (
@@ -64,7 +64,9 @@ export default function ServicePage({ params }: ServicePageProps) {
         <section className="w-full py-16 bg-gray-50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold tracking-tight mb-8 text-center">BENEFITS</h2>
+              <h2 className="text-3xl font-bold tracking-tight mb-8 text-center">
+                BENEFITS
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {serviceData.benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
@@ -85,8 +87,12 @@ export default function ServicePage({ params }: ServicePageProps) {
         <section className="w-full py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold tracking-tight mb-8 text-center">PROCEDURE</h2>
-              <p className="text-gray-600 text-center">{serviceData.procedure}</p>
+              <h2 className="text-3xl font-bold tracking-tight mb-8 text-center">
+                PROCEDURE
+              </h2>
+              <p className="text-gray-600 text-center">
+                {serviceData.procedure}
+              </p>
             </div>
           </div>
         </section>
@@ -97,7 +103,9 @@ export default function ServicePage({ params }: ServicePageProps) {
         <section className="w-full py-16 bg-gray-50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">FAQ</h2>
+              <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">
+                FAQ
+              </h2>
               <div className="space-y-8">
                 {serviceData.faqs.map((faq, index) => (
                   <div key={index} className="border-b border-gray-200 pb-8">
@@ -110,35 +118,17 @@ export default function ServicePage({ params }: ServicePageProps) {
           </div>
         </section>
       )}
-
-      {/* CTA Section */}
-      <section className="w-full py-24 relative">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0">
-          <Image src="/images/image2.jpg" alt="Dental Treatment Room" fill className="object-cover" />
-          <div className="absolute inset-0 bg-teal-900/70"></div>
-          <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10"></div>
-        </div>
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">READY TO TRANSFORM YOUR SMILE?</h2>
-            <p className="text-teal-100 text-lg">
-              Schedule your consultation and take the first step towards a healthier, more beautiful smile.
-            </p>
-            <BookConsultation variant="white" />
-          </div>
-        </div>
-      </section>
     </div>
-  )
+  );
 }
 
 function getServiceData(serviceSlug: string) {
   const services = {
     implants: {
       title: "DENTAL IMPLANTS",
-      shortDescription: "Permanent tooth replacement solutions that look, feel, and function like natural teeth.",
-      image: "/placeholder.svg?height=600&width=600",
+      shortDescription:
+        "Permanent tooth replacement solutions that look, feel, and function like natural teeth.",
+      image: "/images/dentalimplants.jpg",
       description: [
         "Dental implants are titanium posts that are surgically placed into the jawbone beneath your gums to replace the roots of missing teeth. Once in place, they allow your dentist to mount replacement teeth onto them.",
         "Because implants fuse to your jawbone, they provide stable support for artificial teeth. Dentures and bridges mounted to implants won't slip or shift in your mouth, which is especially important when eating and speaking.",
@@ -173,8 +163,9 @@ function getServiceData(serviceSlug: string) {
     },
     veneers: {
       title: "VENEERS",
-      shortDescription: "Thin porcelain shells that cover the front surface of teeth to improve appearance.",
-      image: "/placeholder.svg?height=600&width=600",
+      shortDescription:
+        "Thin porcelain shells that cover the front surface of teeth to improve appearance.",
+      image: "/images/veneers.jpg",
       description: [
         "Dental veneers are thin, custom-made shells of tooth-colored materials designed to cover the front surface of teeth to improve your appearance. These shells are bonded to the front of the teeth, changing their color, shape, size, or length.",
         "Veneers can be made from porcelain or from resin composite materials. Porcelain veneers resist stains better than resin veneers and better mimic the light-reflecting properties of natural teeth.",
@@ -209,8 +200,9 @@ function getServiceData(serviceSlug: string) {
     },
     orthodontics: {
       title: "ORTHODONTICS",
-      shortDescription: "Treatments to correct misaligned teeth and jaws for a beautiful, functional smile.",
-      image: "/placeholder.svg?height=600&width=600",
+      shortDescription:
+        "Treatments to correct misaligned teeth and jaws for a beautiful, functional smile.",
+      image: "/images/orthodontics.jpg",
       description: [
         "Orthodontic treatment is used to correct teeth that are crowded, crooked, protruding, out of alignment or have irregular spacing. By moving the teeth into the ideal position, orthodontics can help enhance the appearance of your teeth and improve how they work.",
         "At LUDent, we offer various orthodontic options, including traditional braces, clear aligners, and other modern techniques to help you achieve a straighter, healthier smile.",
@@ -237,7 +229,8 @@ function getServiceData(serviceSlug: string) {
             "You may experience some discomfort when braces are first placed and after adjustments, but this typically subsides within a few days. Over-the-counter pain relievers can help manage any discomfort.",
         },
         {
-          question: "HOW OFTEN WILL I NEED TO VISIT THE DENTIST DURING TREATMENT?",
+          question:
+            "HOW OFTEN WILL I NEED TO VISIT THE DENTIST DURING TREATMENT?",
           answer:
             "Most patients with braces need to visit every 4-8 weeks for adjustments. For clear aligner therapy, visits are typically scheduled every 6-8 weeks to monitor progress and provide new sets of aligners.",
         },
@@ -245,8 +238,9 @@ function getServiceData(serviceSlug: string) {
     },
     zirkon: {
       title: "ZIRKON CROWNS",
-      shortDescription: "High-quality, natural-looking dental crowns made from zirconium dioxide.",
-      image: "/placeholder.svg?height=600&width=600",
+      shortDescription:
+        "High-quality, natural-looking dental crowns made from zirconium dioxide.",
+      image: "/images/zircon.jpg",
       description: [
         "Zirkon (zirconia) crowns are made from zirconium dioxide, a durable, biocompatible material that offers exceptional strength and aesthetics. These crowns provide a metal-free alternative to traditional porcelain-fused-to-metal crowns.",
         "Zirkon crowns are known for their durability, natural appearance, and biocompatibility, making them an excellent choice for both front and back teeth.",
@@ -281,8 +275,9 @@ function getServiceData(serviceSlug: string) {
     },
     "esthetic-fill": {
       title: "ESTHETIC FILLINGS",
-      shortDescription: "Tooth-colored fillings that restore damaged teeth while maintaining a natural appearance.",
-      image: "/placeholder.svg?height=600&width=600",
+      shortDescription:
+        "Tooth-colored fillings that restore damaged teeth while maintaining a natural appearance.",
+      image: "/images/eshtetic.jpg",
       description: [
         "Esthetic fillings, also known as composite or tooth-colored fillings, are made from a mixture of plastic and fine glass particles. These modern fillings bond directly to the tooth structure, providing both strength and a natural appearance.",
         "Unlike traditional amalgam (silver) fillings, esthetic fillings blend seamlessly with your natural tooth color, making them virtually invisible when you smile or speak.",
@@ -309,7 +304,8 @@ function getServiceData(serviceSlug: string) {
             "Modern composite materials have significantly improved in strength and durability. While amalgam may still be slightly stronger for very large fillings in back teeth, esthetic fillings provide excellent strength for most applications while preserving more natural tooth structure.",
         },
         {
-          question: "CAN EXISTING AMALGAM FILLINGS BE REPLACED WITH ESTHETIC FILLINGS?",
+          question:
+            "CAN EXISTING AMALGAM FILLINGS BE REPLACED WITH ESTHETIC FILLINGS?",
           answer:
             "Yes, many patients choose to replace their old amalgam fillings with esthetic fillings for both cosmetic reasons and to eliminate mercury from their mouths. Our dentists can evaluate your existing fillings and recommend the best options for replacement.",
         },
@@ -317,8 +313,9 @@ function getServiceData(serviceSlug: string) {
     },
     whitening: {
       title: "PROFESSIONAL WHITENING",
-      shortDescription: "Advanced teeth whitening treatments for a brighter, more confident smile.",
-      image: "/placeholder.svg?height=600&width=600",
+      shortDescription:
+        "Advanced teeth whitening treatments for a brighter, more confident smile.",
+      image: "/images/whitening.jpg",
       description: [
         "Professional teeth whitening is a safe, effective way to enhance the brightness of your smile. At LUDent, we offer both in-office and take-home whitening options to accommodate your preferences and lifestyle.",
         "Our professional whitening treatments use higher-concentration bleaching agents than over-the-counter products, delivering more dramatic results in less time. All treatments are supervised by our dental professionals to ensure safety and effectiveness.",
@@ -353,8 +350,9 @@ function getServiceData(serviceSlug: string) {
     },
     filler: {
       title: "DERMAL FILLERS",
-      shortDescription: "Cosmetic treatments to restore volume and fullness to the face.",
-      image: "/placeholder.svg?height=600&width=600",
+      shortDescription:
+        "Cosmetic treatments to restore volume and fullness to the face.",
+      image: "/images/dermal.jpg",
       description: [
         "Dermal fillers are gel-like substances that are injected beneath the skin to restore lost volume, smooth lines, soften creases, or enhance facial contours. At LUDent, our dental professionals are specially trained to provide facial aesthetic treatments that complement your dental work for a harmonious, rejuvenated appearance.",
         "We use only premium, FDA-approved hyaluronic acid fillers, which are naturally compatible with the body and provide natural-looking, temporary results that can be adjusted to your preferences.",
@@ -389,8 +387,9 @@ function getServiceData(serviceSlug: string) {
     },
     botox: {
       title: "BOTOX",
-      shortDescription: "Treatments to reduce facial wrinkles and create a more youthful appearance.",
-      image: "/placeholder.svg?height=600&width=600",
+      shortDescription:
+        "Treatments to reduce facial wrinkles and create a more youthful appearance.",
+      image: "/images/botox.jpg",
       description: [
         "Botox is a purified protein that temporarily relaxes the muscles that cause dynamic wrinkles – those that appear with facial expressions like smiling, frowning, or squinting. At LUDent, our dental professionals have extensive knowledge of facial anatomy and are skilled in providing precise Botox treatments for both cosmetic and therapeutic purposes.",
         "In addition to its cosmetic applications, Botox can also be used to treat certain dental conditions such as TMJ disorders, bruxism (teeth grinding), and gummy smiles.",
@@ -425,8 +424,9 @@ function getServiceData(serviceSlug: string) {
     },
     prosthetics: {
       title: "DENTAL PROSTHETICS",
-      shortDescription: "Custom-made replacements for missing teeth to restore function and aesthetics.",
-      image: "/placeholder.svg?height=600&width=600",
+      shortDescription:
+        "Custom-made replacements for missing teeth to restore function and aesthetics.",
+      image: "/images/DENTALPROSTHETICS.webp",
       description: [
         "Dental prosthetics include a variety of devices designed to replace missing teeth and restore both function and appearance. At LUDent, we offer comprehensive prosthetic solutions including dentures, bridges, and implant-supported restorations.",
         "Our prosthetic devices are custom-crafted using high-quality materials to ensure comfort, durability, and a natural appearance that complements your facial features and remaining natural teeth.",
@@ -448,7 +448,8 @@ function getServiceData(serviceSlug: string) {
             "We offer a full range of prosthetic options including complete dentures (for patients missing all teeth), partial dentures (for patients missing some teeth), fixed bridges, and implant-supported restorations such as crowns, bridges, and overdentures.",
         },
         {
-          question: "HOW LONG DOES IT TAKE TO GET USED TO A NEW DENTAL PROSTHETIC?",
+          question:
+            "HOW LONG DOES IT TAKE TO GET USED TO A NEW DENTAL PROSTHETIC?",
           answer:
             "Adaptation periods vary by individual and type of prosthetic. Most patients adjust to their new prosthetics within a few weeks. During this time, you may experience increased saliva flow, mild soreness, or slight changes in speech, all of which typically resolve as you become accustomed to the device.",
         },
@@ -459,7 +460,7 @@ function getServiceData(serviceSlug: string) {
         },
       ],
     },
-  }
+  };
 
-  return services[serviceSlug as keyof typeof services] || null
+  return services[serviceSlug as keyof typeof services] || null;
 }
