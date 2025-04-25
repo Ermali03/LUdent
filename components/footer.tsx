@@ -101,7 +101,9 @@ export function Footer() {
               </div>
               <div className="flex items-start space-x-3">
                 <Mail className="h-5 w-5 text-teal-500 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">info@ludent.com</span>
+                <span className="text-gray-400">
+                  ludentdentalclinic@gmail.com
+                </span>
               </div>
               <span className="text-gray-400">Mon - Sat: 10:00 - 19:00</span>
             </div>
