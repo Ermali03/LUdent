@@ -28,7 +28,7 @@ export default function DoctorsPage() {
             <div className="space-y-8">
               <DoctorCard
                 name="Dr. Arlind Ramadani"
-                specialty="Implantology & Cosmetic Dentistry"
+                specialty=" "
                 bio="I graduated from the University of Prishtina in 2021, marking the beginning of a journey rooted in passion, precision, and a deep commitment to dental care. Since then, I’ve continually expanded my expertise by participating in numerous specialized courses across the country, staying at the forefront of modern techniques and innovations in dentistry.                "
                 imageSrc="/images/arlind.jpeg"
                 instagramURL="https://www.instagram.com/arlindramadani/"
@@ -72,7 +72,7 @@ export default function DoctorsPage() {
             <div className="space-y-8">
               <DoctorCard
                 name="Dr. Olta Kastrati"
-                specialty="Orthodontics & Aesthetic Dentistry"
+                specialty=" "
                 bio="I'm Dr. Olta Kastrati, a dedicated dental professional who graduated from the University of Prishtina in 2021. Since then, I've continually invested in my professional development, completing numerous specialized courses in endodontics, orthodontics, laser dentistry, and facial aesthetics—including dermal fillers and Botox—focusing particularly on aesthetic treatments that enhance natural beauty."
                 imageSrc="/images/olta.jpeg"
                 instagramURL="https://www.instagram.com/oltakastrati/"
