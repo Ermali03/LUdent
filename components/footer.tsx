@@ -91,7 +91,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-teal-600 transition-colors"
                 >
-                  Rr. Driton Islami
+                  Rr. Reçaku
                 </a>
               </div>
 

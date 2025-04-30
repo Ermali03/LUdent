@@ -104,10 +104,10 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
-              <div className="absolute -top-6 -left-6 w-64 h-64 bg-teal-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
-              <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+              <div className="hidden md:block absolute -top-6 -left-6 w-64 h-64 bg-teal-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+              <div className="hidden md:block absolute -bottom-6 -right-6 w-64 h-64 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
               <div className="relative">
-                <div className="absolute inset-0 border border-teal-200 -translate-x-4 -translate-y-4"></div>
+                <div className="hidden md:block absolute inset-0 border border-teal-200 -translate-x-4 -translate-y-4"></div>
                 <Image
                   src="/images/luxury.jpeg"
                   alt="Dr. Olta's treatment room"
@@ -321,7 +321,7 @@ export default function Home() {
               </p>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 border border-teal-200 translate-x-4 translate-y-4"></div>
+              <div className="hidden md:block absolute inset-0 border border-teal-200 translate-x-4 translate-y-4"></div>
               <Image
                 src="/images/image6.jpg"
                 alt="LUDent clinic Elements"
