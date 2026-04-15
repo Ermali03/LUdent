@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import * as z from "zod"
+import { standardSchemaResolver } from "@hookform/resolvers/standard-schema"
+import { z } from "zod"
 import { Loader2 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -26,11 +26,14 @@ const formSchema = z.object({
   }),
 })
 
+type ContactFormInput = z.input<typeof formSchema>
+type ContactFormValues = z.output<typeof formSchema>
+
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<ContactFormInput, unknown, ContactFormValues>({
+    resolver: standardSchemaResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -39,7 +42,7 @@ export function ContactForm() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(values: ContactFormValues) {
     setIsSubmitting(true)
 
     // Simulate form submission

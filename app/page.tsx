@@ -74,6 +74,8 @@ export default function Home() {
                   alt="Modern dental equipment"
                   width={600}
                   height={600}
+                  priority
+                  loading="eager"
                   className="object-cover rounded-lg"
                 />
               </div>
@@ -228,13 +230,15 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="relative overflow-hidden group">
                 <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 via-teal-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <Image
-                  src="/images/image3.jpg"
-                  alt="Advanced dental equipment"
-                  width={600}
-                  height={400}
-                  className="w-full h-[400px] object-cover"
-                />
+                <div className="relative h-[400px] w-full">
+                  <Image
+                    src="/images/image3.jpg"
+                    alt="Advanced dental equipment"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
                   <h3 className="text-xl font-bold">Precision Equipment</h3>
                   <p className="text-teal-100 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
@@ -245,13 +249,15 @@ export default function Home() {
               </div>
               <div className="relative overflow-hidden group">
                 <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 via-teal-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <Image
-                  src="/images/image2.jpg"
-                  alt="Modern treatment room"
-                  width={600}
-                  height={400}
-                  className="w-full h-[400px] object-cover"
-                />
+                <div className="relative h-[400px] w-full">
+                  <Image
+                    src="/images/image2.jpg"
+                    alt="Modern treatment room"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
                   <h3 className="text-xl font-bold">Comfortable Environment</h3>
                   <p className="text-teal-100 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">

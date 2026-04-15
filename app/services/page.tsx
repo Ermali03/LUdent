@@ -66,13 +66,15 @@ export default function ServicesPage() {
             </div>
             <div className="relative">
               <div className="absolute inset-0 border border-teal-200 translate-x-4 translate-y-4"></div>
-              <Image
-                src="/images/image2.jpg"
-                alt="Premium dental care"
-                width={600}
-                height={700}
-                className="object-cover w-full h-[600px] relative z-10"
-              />
+              <div className="relative z-10 h-[600px] w-full">
+                <Image
+                  src="/images/image2.jpg"
+                  alt="Premium dental care"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

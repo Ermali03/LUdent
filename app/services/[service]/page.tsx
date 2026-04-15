@@ -5,13 +5,14 @@ import { BookConsultation } from "@/components/book-consultation";
 import { HeroSectionWithOverlay } from "@/components/hero-section-with-overlay";
 
 interface ServicePageProps {
-  params: {
+  params: Promise<{
     service: string;
-  };
+  }>;
 }
 
-export default function ServicePage({ params }: ServicePageProps) {
-  const serviceData = getServiceData(params.service);
+export default async function ServicePage({ params }: ServicePageProps) {
+  const { service } = await params;
+  const serviceData = getServiceData(service);
 
   if (!serviceData) {
     return <div>Service not found</div>;
