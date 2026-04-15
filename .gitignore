@@ -1,6 +1,10 @@
 # Dependencies
 /node_modules/
 
+# Package manager lockfiles (keep only npm's package-lock.json)
+pnpm-lock.yaml
+yarn.lock
+
 # Next.js
 /.next/
 /out/
